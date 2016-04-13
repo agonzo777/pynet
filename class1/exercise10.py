@@ -12,5 +12,8 @@ for item in range(len(nonaes)):
     print nonaes[item].text
     cryptemp = nonaes[item]
     for line in cryptemp.children:
-        print line.text
+        tset = line.text.strip()
+        if tset.startswith('set transform-set'):
+            print tset
+
 

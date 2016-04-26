@@ -4,9 +4,9 @@ import json
 from pprint import pprint as pp
 
 
-ciscocfg = CiscoConfParse('cisco_ipsec.text')
+ciscocfg = CiscoConfParse('cisco_ipsec.txt')
 
-nonaes = ciscocfg.find_objects_wo_child(parentspec=r'crpto map CRYPTO',childspec=r'set transform-set AES-SHA')
+nonaes = ciscocfg.find_objects_wo_child(parentspec=r'crypto map CRYPTO',childspec=r'set transform-set AES-SHA')
 
 for item in range(len(nonaes)):
     print nonaes[item].text

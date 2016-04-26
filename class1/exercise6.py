@@ -18,14 +18,14 @@ with open('exercise6.yml','r') as a:
 pp(newlist)
 
 
-jlist = jason.dumps(list1)
+jlist = json.dumps(list1)
 
 
 with open('exercise6.json','w') as fhandle:
-    jason.dump(jlist,fhandle)
+    json.dump(jlist,fhandle)
 
 with open('exercise6.json','r') as fhandle:
-    new_jlist = jason.load(fhandle)
+    new_jlist = json.load(fhandle)
 
 pp(jlist)
 

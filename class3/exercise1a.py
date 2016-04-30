@@ -5,7 +5,7 @@ import json
 import pysnmp
 import email_helper
 import smtplib
-import paygal
+import pygal
 
 snmp_oids = (('ccmHistoryRunningLastChanged','1.3.6.1.4.1.9.9.43.1.1.1.0',True),('ccmHisotryRunningLastSaved','1.3.6.1.4.1.9.9.43.1.1.2.0',True),('ccmHistoryStartupLastCHanged','1.3.6.1.4.1.9.9.43.1.1.3.0',True))
 
@@ -28,13 +28,15 @@ changeoccured = False
 
 while (changeoccured != True):
     snmp_data = snmp_helper.snmp_get_oid_v3(snmp_device, snmp_user, oid=snmp_oids[0][1])
-    output = int(snmp_helper.snmp_extract(snmp_data)
-    if int(output) > changeoccured:
+    output = int(snmp_helper.snmp_extract(snmp_data))
+    if output > runtime:
+        diff = int(output) - runtime
         recipient = 'amiri.gonzalez@gmail.com'
         subject = 'Change Occured'
-        message = 'A change occured'
+        message = 'A change occured %d' % diff
         sender = 'amiri.gonzalez@gmail.com'
         email_helper.send_mail(recipient, subject, message, sender)
+        changeoccured = True
     else:
         continue
 

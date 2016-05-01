@@ -14,7 +14,9 @@ rc.timeout = 3
 rc.expect('ssword:')
 rc.sendline(password)
 rc.expect('#')
-rc.send("show ip int brief")
+rc.before
+rc.after
+rc.sendline("show ip int brief")
 rc.expect('#')
 print rc.before
 print rc.after

@@ -1,0 +1,3 @@
+logging buffered 9999
+no logg console
+

@@ -1,0 +1,7 @@
+---
+
+- name: Generate switch configurations
+  template: src=switchconfg.j2 dest=/home/agonzalez/pynet/class5/cfg/{{item.hostname}}.txt
+  with_items: switchvar
+
+

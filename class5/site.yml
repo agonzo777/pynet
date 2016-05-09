@@ -1,0 +1,7 @@
+---
+- name: Generate swtich configurations
+  hosts: local
+
+  roles:
+    - switch
+  

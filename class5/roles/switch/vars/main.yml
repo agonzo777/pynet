@@ -1,9 +1,9 @@
 ---
 
 switchvar:
-  - {hostname: pylab-switch1, ip_addr: 10.0.0.1, secret: password, access_vlan: 10, snmp_community: galileo1, default_gateway: 10.0.0.250}
-  - {hostname: pylab-switch2, ip_addr: 10.0.1.1, secret: password, access_vlan: 10, snmp_community: galileo1, default_gateway: 10.0.1.250}
-  - {hostname: pylab-switch3, ip_addr: 10.0.2.1, secret: password, access_vlan: 10, snmp_community: galileo1, default_gateway: 10.0.2.250}
-  - {hostname: pylab-switch4, ip_addr: 10.0.3.1, secret: password, access_vlan: 10, snmp_community: galileo1, default_gateway: 10.0.3.250}
-  - {hostname: pylab-switch5, ip_addr: 10.0.4.1, secret: password, access_vlan: 10, snmp_community: galileo1, default_gateway: 10.0.4.250}
+  - {hostname: pylab-switch1, ip_addr: 10.0.0.1, secret: password, access_vlan: 10, snmp_community: galileo1, snmpv3: False, default_gateway: 10.0.0.250}
+  - {hostname: pylab-switch2, ip_addr: 10.0.1.1, secret: password, access_vlan: 10, snmp_community: galileo1, snmpv3: False, default_gateway: 10.0.1.250}
+  - {hostname: pylab-switch3, ip_addr: 10.0.2.1, secret: password, access_vlan: 10, snmp_community: galileo1, snmpv3: False, default_gateway: 10.0.2.250}
+  - {hostname: pylab-switch4, ip_addr: 10.0.3.1, secret: password, access_vlan: 10, snmp_community: galileo1, snmpv3: True, default_gateway: 10.0.3.250}
+  - {hostname: pylab-switch5, ip_addr: 10.0.4.1, secret: password, access_vlan: 10, snmp_community: galileo1, snmpv3: True, default_gateway: 10.0.4.250}
 

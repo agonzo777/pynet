@@ -27,6 +27,11 @@ interface Vlan1
 !
 ip default-gateway 10.0.0.250
 snmp-server community galileo1 RO 
+
+
+
+
+
 !
 line con 0
 line vty 0 4

@@ -1,0 +1,17 @@
+---
+
+- name: Exercise 5
+  hosts: pynet-rtr1
+  tasks: 
+
+      - name: Transfer a small file
+        cisco_file_transfer:
+            source_file="/home/agonzalez/ANSIBLE/agonzalez_test_file.txt"
+            dest_file="agonzalez_test_file.txt"
+            overwrite=true
+            enable_scp=true
+            host={{ host }}
+            port={{ port }}
+            username={{ username }}
+            password={{ password }}
+

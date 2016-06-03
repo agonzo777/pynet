@@ -13,9 +13,24 @@ import pyeapi
 #switch_url = switch_url + '/command-api'
 
 
-pynet-sw3 = pyeapi.connect_to('pynet-sw3')
+py3 = pyeapi.connect_to('pynet-sw3')
 
-pynet-sw3.enable('show version')
+output = py3.enable('show interfaces')
+intf = output[0]
+intf = intf['result']
+intf = intf['interfaces']
+
+
+
+for k,v in intf.items():
+#    print "Interface: \n {}".format(k)
+    print k
+    if k != 'Vlan1':
+        counters = v['interfaceCounters']
+        print "InOctets: {}".format(counters.get('inOctets'))
+        print "OutOctets: {}".format(counters.get('outOctets'))
+    else:
+        print "Not Applicable"
 
 
 

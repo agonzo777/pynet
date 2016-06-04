@@ -10,7 +10,9 @@ def func2():
 
 
 
+def main():
+    print "Executable Code in Whatever.py"
 
-print "Executable Code in Whatever.py"
+if __name__ == "__main__": main()
 
 

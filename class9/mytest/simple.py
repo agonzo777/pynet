@@ -4,5 +4,12 @@ def func1 ():
     print "Hello World Function1"
 
 
-print "Executable Code"
+def main():
+   print "Executable Code"
+
+
+
+
+if __name__ == "__main__": main()
+
 

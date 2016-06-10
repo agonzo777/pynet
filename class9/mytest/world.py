@@ -26,11 +26,21 @@ class Myclass(object):
 
 
 
-
-#class MyChildClass (Myclass):
+class MyChildClass (Myclass):
     def negate(self):
         return "No {} {} ".format(self.a, self.b) * self.c
 
+
+
+class negative(Myclass):
+
+    def __init__(self, a,b,c):
+        self.a = 'New'
+        self.b = 'World Order'
+        self.c = c
+
+    def changeme (self):
+        return  (self.a + self.b) * self.c
 
 
 

@@ -6,14 +6,6 @@ def func3():
 
 
 
-def main():
-    print "Executable code from world.py"
-
-
-if __name__ == "__main__": main()
-
-
-
 class Myclass(object):
 
 
@@ -43,4 +35,8 @@ class negative(Myclass):
         return  (self.a + self.b) * self.c
 
 
+def main():
+    print "Executable code from world.py"
 
+
+if __name__ == "__main__": main()
